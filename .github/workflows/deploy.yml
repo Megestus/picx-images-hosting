@@ -23,8 +23,11 @@ jobs:
     - name: Install dependencies
       run: npm ci
 
-    - name: Generate static HTML
-      run: npm run generate-html
+    - name: Build static site
+      run: |
+        # 运行你的 Node.js 脚本来生成静态内容
+        node server.js
+        # 如果你需要其他构建步骤，可以在这里添加
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3

@@ -1,0 +1,40 @@
+# .gitignore
+node_modules/
+
+# Ignore logs
+logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+
+# Ignore build artifacts
+dist/
+.build/
+*.min.js
+*.min.css
+
+# Ignore IDEs and editors
+.idea/
+.vscode/
+*.sublime-workspace
+*.swp
+
+# Ignore credentials
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.staging
+.env.test
+
+# Ignore other files
+*.bak
+*.old
+*.orig
+*.rej
+*.lock
+*.DS_Store
+Thumbs.db

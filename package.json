@@ -1,11 +1,21 @@
 {
-    "name": "picx-images",
+    "name": "picx-images-hosting",
     "version": "1.0.0",
+    "description": "A simple server to host images and metadata",
+    "main": "server.js",
     "scripts": {
-        "generate-html": "node generateImages.js"
+        "start": "node server.js"
     },
     "dependencies": {
-        "fs": "^0.0.1-security", // 这只是一个占位符，实际上不需要安装
-        "path": "^0.12.7" // 这也是一个占位符，实际上不需要安装
-    }
+        "express": "^4.17.1",
+        "fs-extra": "^10.0.0"
+    },
+    "keywords": [
+        "node",
+        "express",
+        "images",
+        "hosting"
+    ],
+    "author": "Your Name",
+    "license": "ISC"
 }
