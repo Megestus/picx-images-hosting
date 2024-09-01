@@ -1,0 +1,11 @@
+{
+    "name": "picx-images",
+    "version": "1.0.0",
+    "scripts": {
+        "generate-html": "node generateImages.js"
+    },
+    "dependencies": {
+        "fs": "^0.0.1-security", // 这只是一个占位符，实际上不需要安装
+        "path": "^0.12.7" // 这也是一个占位符，实际上不需要安装
+    }
+}
