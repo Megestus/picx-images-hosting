@@ -3,53 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
+    <title>Image Gallery2</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .container {
+        .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
-            padding: 10px;
+            gap: 1em;
+            padding: 1em;
         }
-        img {
+        .grid img {
             width: 100%;
             height: auto;
         }
     </style>
 </head>
 <body>
-    <div class="container" id="imageGrid"></div>
-
-    <script>
-        // 动态加载图片并按创建时间排序
-        async function loadImages() {
-            const imageFolder = '/img/';
-            const fileListResponse = await fetch('/img/?dir=true');
-            const fileList = await fileListResponse.json();
-
-            fileList.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-
-            return fileList;
-        }
-
-        // 动态添加图片到页面
-        async function addImagesToPage() {
-            const fileList = await loadImages();
-            const imageGrid = document.getElementById('imageGrid');
-
-            fileList.slice(0, 30).forEach(file => {
-                const imgElement = document.createElement('img');
-                imgElement.src = imageFolder + file.name;
-                imgElement.alt = file.name;
-                imageGrid.appendChild(imgElement);
-            });
-        }
-
-        // 初始化
-        document.addEventListener('DOMContentLoaded', addImagesToPage);
-    </script>
+    233
+    <div class="grid" id="gallery"></div>
+    <script src="gallery.js"></script>
 </body>
 </html>
